@@ -1,0 +1,141 @@
+//=============================================================
+// _________                                    
+// \_   ___ \_______  ____   ____  __ __  ______
+// /    \  \/\_  __ \/    \ /    \|  |  \/  ___/
+// \     \____|  | \(  ( ) )   |  \  |  /\___ \ 
+//  \______  /|__|   \____/|___|  /____//____  >
+//         \/                   \/           \/  
+//=============================================================
+//= Mensageiro Global
+//===== Por: ==================================================
+//= Linne
+//===== Versão Atual: =========================================
+//= 1.0
+//===== Description: ==========================================
+//= Anuncia global para todo o servidor com várias cores
+//= diferentes.
+//= Mande PM para npc:globalvip com qualquer palavra para o npc
+//= funcionar.
+//===== Comentários Adicionais: ===============================
+//= 1.0 Criação do Script [Linne]
+//===== Observações: ==========================================
+//= Configurações ativas na script.
+//=============================================================
+
+
+-	script	globalvip	-1,{
+
+OnWhisperGlobal:
+
+//----- Nome do NPC ---------------------------------//
+set $nome$,"[^FF0000 Mensageiro Global ^000000]";
+//---------------------------------------------------//
+	
+	if (getgroupid()<1) goto novip;
+	mes $nome$;
+	mes "Olá ^871F78"+ strcharinfo(0) +"^000000 Gostaria de manda uma mensagem para todo servidor ?";
+	next;
+	if(select("Sim","Não")==2) close;
+	mes $nome$;
+	mes "Escolha a cor do Torpedo";
+	next;
+	switch(select("^FF0000Vermelho^000000","^008B00Verde^000000","^000000Preto^000000","^FFFF00Amarelo^000000","^0000FFAzul^000000","^778899Cinza^000000","^A020F0Roxo^000000")){
+
+		case 1:
+			mes $nome$;
+			mes "Digite sua mensagem";
+			next;
+			input @mensagem$;
+			mes @mensagem$;
+			if(select("Está Certo","Desculpe, digitei errado!")==2) close;
+			next;
+			announce "[VIP]: ~» "+strcharinfo(0)+" diz : "+@mensagem$+" ",bc,0xD20000;
+			mes $nome$;
+			mes "Sua menssagem foi enviada";
+			close;
+	
+		case 2:
+			mes $nome$;
+			mes "Digite sua mensagem";
+			next;
+			input @mensagem$;
+			mes @mensagem$;
+			if(select("Está Certo","Desculpe, digitei errado!")==2) close;
+			next;
+			announce "[VIP]: ~» "+strcharinfo(0)+" diz : "+@mensagem$+" ",bc,0x99CC00;
+			mes $nome$;
+			mes "Sua menssagem foi enviada";
+			close;
+	
+		case 3:
+			mes $nome$;
+			mes "Digite sua mensagem";
+			next;
+			input @mensagem$;
+			mes @mensagem$;
+			if(select("Está Certo","Desculpe, digitei errado!")==2) close;
+			next;
+			announce "[VIP]: ~» "+strcharinfo(0)+" diz : "+@mensagem$+" ",bc,0x000000;
+			mes $nome$;
+			mes "Sua menssagem foi enviada";
+			close;
+	
+		case 4:
+			mes $nome$;
+			mes "Digite sua mensagem";
+			next;
+			input @mensagem$;
+			mes @mensagem$;
+			if(select("Está Certo","Desculpe, digitei errado!")==2) close;
+			next;
+			announce "[VIP]: ~» "+strcharinfo(0)+" diz : "+@mensagem$+" ",bc_yellow;
+			mes $nome$;
+			mes "Sua menssagem foi enviada";
+			close;
+	
+		case 5:	
+			mes $nome$;	
+			mes "Digite sua mensagem";
+			next;
+			input @mensagem$;
+			mes @mensagem$;
+			if(select("Está Certo","Desculpe, digitei errado!")==2) close;
+			next;
+			announce "[VIP]: ~» "+strcharinfo(0)+" diz : "+@mensagem$+" ",bc_blue;
+			mes $nome$;	mes "Sua menssagem foi enviada";
+			close;
+	
+		case 6:
+			mes $nome$;
+			mes "Digite sua mensagem";
+			next;
+			input @mensagem$;
+			mes @mensagem$;
+			if(select("Está Certo","Desculpe, digitei errado!")==2) close;
+			next;
+			announce "[VIP]: ~» "+strcharinfo(0)+" diz : "+@mensagem$+" ",bc,0xBAB9B9;
+			mes $nome$;
+			mes "Sua menssagem foi enviada";
+			close;
+		
+		case 7:
+			mes $nome$;
+			mes "Digite sua mensagem";
+			next;
+			input @mensagem$;
+			mes @mensagem$;
+			if(select("Está Certo","Desculpe, digitei errado!")==2) close;
+			next;
+			announce "[VIP]: ~» "+strcharinfo(0)+" diz : "+@mensagem$+" ",bc,0xCC00FF;
+			mes $nome$;
+			mes "Sua menssagem foi enviada";
+			close;
+		
+		novip:
+			mes $nome$;
+			mes "Lamento, mas você não é vip";
+			mes "Acesse o site e veja como se torna vip.";
+			close;
+		}
+	end;
+}

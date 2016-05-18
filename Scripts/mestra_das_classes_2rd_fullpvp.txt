@@ -1,0 +1,346 @@
+//=============================================================
+// _________                                    
+// \_   ___ \_______  ____   ____  __ __  ______
+// /    \  \/\_  __ \/    \ /    \|  |  \/  ___/
+// \     \____|  | \(  ( ) )   |  \  |  /\___ \ 
+//  \______  /|__|   \____/|___|  /____//____  >
+//         \/                   \/           \/  
+//=============================================================
+//= Mestra das Classes
+//===== Por: ==================================================
+//= Linne
+//===== Versão Atual: =========================================
+//= 1.0
+//===== Description: ==========================================
+//= Transformar aprendizes em classes do jogo.
+//===== Comentários Adicionais: ===============================
+//= 1.0 Criação do Script [Linne]
+//===== Observações: ==========================================
+//= Configurações abaixo. Menus de escolha de classes ativos.
+//=============================================================
+
+prontera,139,203,5	script	Mestra das Classes	4_F_KAFRA9,{
+
+//--- Configurações do NPC.
+set .@name$,"[^FF8000Mestra das Classes^000000]"; // Nome do NPC.
+set .@level$,254; // Level Base recebido ao escolher profissão.
+set .@job$,70; // Level Classe recebido ao escolher uma profissão.
+
+mes .@name$;
+if(Class > 4007 && Class < 4023 || Class > 4046 && Class < 4050 || Class > 4029 && Class < 4046 || Class == 4045){
+mes "Não posso fazer nada por você.";
+close;
+}
+
+atcommand "@blvl "+.@level$;
+mes "Olá ^0000CD"+strcharinfo(0)+"^000000";
+mes "Escolha qual classe você deseja se tornar !";
+next;
+switch(select("« ^FF8000 Classes Normais ^000000 »","« ^FF8000 Classes Expansivas ^000000 »","« ^FF8000 Classes Baby ^000000 »","« Encerrar Conversa »")) {
+
+	case 1:
+	mes .@name$;
+	mes "Certo, selecione qual classe você deseja se tornar:";
+	next;
+	switch(select("« Algoz »","« Desordeiro »","« Menestrel/Cigana »","« Mestre »","« Mestre-ferreiro »","« Atirador de Elite »","« Criador »","« Arquimago »","« Lorde »","« Paladino »","« Sumo Sacerdote »","« Professor »","« ^FF8000Encerrar Conversa^000000 »")) {
+
+		case 1:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Algoz!";
+		if(sex == 1)mes "Parabéns, você agora é um Algoz!";
+		jobchange 4013;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 2:
+		if(sex == 0)mes "Parabéns, você agora é uma Desordeira!";
+		if(sex == 1)mes "Parabéns, você agora é um Desordeiro!";
+		jobchange 4018;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 3:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Cigana!";
+		if(sex == 1)mes "Parabéns, você agora é um Menestrel!";
+		jobchange 4021;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 4:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Mestra!";
+		if(sex == 1)mes "Parabéns, você agora é um Mestra!";
+		jobchange 4016;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 5:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Mestre-Ferreira!";
+		if(sex == 1)mes "Parabéns, você agora é um Mestre-Ferreiro!";
+		jobchange 4011;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 6:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Atidarora de Elite!";
+		if(sex == 1)mes "Parabéns, você agora é um Atirador de Elite!";
+		jobchange 4012;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 7:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Criadora!";
+		if(sex == 1)mes "Parabéns, você agora é um Criador!";
+		jobchange 4019;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 8:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Arquimaga!";
+		if(sex == 1)mes "Parabéns, você agora é um Arquimago!";
+		jobchange 4010;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 9:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Lady!";
+		if(sex == 1)mes "Parabéns, você agora é um Lorde!";
+		jobchange 4008;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 10:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Paladina!";
+		if(sex == 1)mes "Parabéns, você agora é um Paladino!";
+		jobchange 4015;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 11:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Sumo-Sacerdotiza!";
+		if(sex == 1)mes "Parabéns, você agora é um Sumo-Sacerdote!";
+		jobchange 4009;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 12:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Professora!";
+		if(sex == 1)mes "Parabéns, você agora é um Professor!";
+		jobchange 4017;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 13:
+		close;
+
+	}
+	
+	case 2:
+	mes .@name$;
+	mes "Certo, selecione qual ^FF8000Classe Expansiva^000000 você deseja se tornar:";
+	next;
+	switch(select("« Mestre Taekwon »","« Espiritualista »","« Justiceiro »","« Ninja »","« Super Aprendiz »","« ^FF8000Encerrar Conversa^000000 »")) {
+	
+		case 1:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Mestra Taekwon!";
+		if(sex == 1)mes "Parabéns, você agora é um Mestre Taekwon!";
+		jobchange 4047;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 2:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Espiritualista!";
+		if(sex == 1)mes "Parabéns, você agora é um Espiritualista!";
+		jobchange 4049;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 3:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Justiceira!";
+		if(sex == 1)mes "Parabéns, você agora é um Justiceiro!";
+		jobchange 24;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 4:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Ninja!";
+		if(sex == 1)mes "Parabéns, você agora é um Ninja!";
+		jobchange 25;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 5:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Super Aprendiz!";
+		if(sex == 1)mes "Parabéns, você agora é um Super Aprendiz!";
+		jobchange 23;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 6:
+		close;
+		
+	}
+	
+	case 3:
+	mes .@name$;
+	mes "Certo, selecione qual ^FF8000Classe Baby^000000 você deseja se tornar:";
+	next;
+	switch(select("« Baby Alquimista »","« Baby Bardo/Odalisca »","« Baby Arruaceiro »","« Baby Sábio »","« Baby Templário »","« Baby Ferreiro »","« Baby Caçador »","« Baby Bruxo »","« Baby Monge »","« Baby Cavaleiro »","« Baby Mercenário »","« Baby Sacerdote »","« Baby Super-Aprendiz »","« ^FF8000Encerrar Conversa^000000 »")) {
+	
+		case 1:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Alquimista!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Alquimista!";
+		jobchange 4041;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 2:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Odalisca!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Bardo!";
+		jobchange 4042;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 3:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Arruaceira!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Arruaceiro!";
+		jobchange 4040;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 4:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Sábia!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Sábio!";
+		jobchange 4039;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 5:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Templária!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Templário!";
+		jobchange 4037;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 6:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Ferreira!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Ferreiro!";
+		jobchange 4033;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 7:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Caçadora!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Caçador!";
+		jobchange 4034;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 8:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Bruxa!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Bruxo!";
+		jobchange 4032;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 9:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Monja!";
+		if(sex == 1)mes "Parabéns, você agora é um Monge!";
+		jobchange 4038;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 10:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Cavaleira!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Cavaleiro!";
+		jobchange 4030;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 11:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Mercenaria!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Mercenario!";
+		jobchange 4035;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 12:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Sacerdotiza!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Sacerdote!";
+		jobchange 4031;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 13:
+		mes .@name$;
+		if(sex == 0)mes "Parabéns, você agora é uma Baby Super Aprendiz!";
+		if(sex == 1)mes "Parabéns, você agora é um Baby Super Aprendiz!";
+		jobchange 4045;
+		atcommand "@jlvl "+.@job$;
+		atcommand "@allskill";
+		close;
+		
+		case 14:
+		close;
+
+	}
+	
+	case 4:
+	close;
+	}
+}
