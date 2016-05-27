@@ -1,0 +1,125 @@
+//=============================================================
+// _________                                    
+// \_   ___ \_______  ____   ____  __ __  ______
+// /    \  \/\_  __ \/    \ /    \|  |  \/  ___/
+// \     \____|  | \(  ( ) )   |  \  |  /\___ \ 
+//  \______  /|__|   \____/|___|  /____//____  >
+//         \/                   \/           \/  
+//=============================================================
+//= Vendedor de Armas
+//===== Por: ==================================================
+//= Linne
+//===== Versão Atual: =========================================
+//= 1.0
+//===== Description: ==========================================
+//= Exemplo de como funcionar uma loja com menus.
+//===== Comentários Adicionais: ===============================
+//= 1.0 Criação do Script [Linne]
+//===== Observações: ==========================================
+//= Configurações ativas na script.
+//=============================================================
+
+prontera,164,172,3	script	Vendedor de Armas#1	1_M_MERCHANT,{
+
+	mes "[ Vendedor de Armas ]";
+	mes "Olá "+strcharinfo(0)+".";
+	mes "O que deseja comprar hoje?";
+	next;
+	switch(select("Adagas:Arcos:Cajados de Duas Mãos:Cajados de Uma Mão:Chicotes:Espadas de Duas Mãos:Espadas de Uma Mão:Espingardas:Garras:Huumas:Instrumentos Musicais:Katares:Lanças de Duas Mãos:Lanças de Uma Mão:Lança-granadas:Livros:Maças:Machados de Duas Mãos:Machados de Uma Mão:Metralhadoras:Pistolas:Rifles:Cancelar")) {
+
+		case 1: // Adaga
+			callshop "shop1",1;
+			end;
+		case 2: // Arco
+			callshop "shop2",1;
+			end;
+		case 3: // Cajado de Duas Maos
+			callshop "shop3",1;
+			end;
+		case 4: // Cajado de Uma Mao
+			callshop "shop4",1;
+			end;
+		case 5: // Chicote
+			callshop "shop5",1;
+			end;
+		case 6: // Espada de Duas Maos
+			callshop "shop6",1;
+			end;
+		case 7: // Espada de Uma Mao
+			callshop "shop7",1;
+			end;
+		case 8: // Espingarda
+			callshop "shop8",1;
+			end;
+		case 9: // Garra
+			callshop "shop9",1;
+			end;
+		case 10: // Huuma
+			callshop "shop10",1;
+			end;
+		case 11: // Instrumento Musical
+			callshop "shop11",1;
+			end;
+		case 12: // Katar
+			callshop "shop12",1;
+			end;
+		case 13: // Lança de Duas Maos
+			callshop "shop13",1;
+			end;
+		case 14: // Lança de Uma Mao
+			callshop "shop14",1;
+			end;
+		case 15: // Lança-granadas
+			callshop "shop15",1;
+			end;
+		case 16: // Livro
+			callshop "shop16",1;
+			end;
+		case 17: // Maça
+			callshop "shop17",1;
+			end;
+		case 18: // Machado de Duas Maos
+			callshop "shop18",1;
+			end;
+		case 19: // Machado de Uma Mao
+			callshop "shop19",1;
+			end;
+		case 20: // Metralhadora
+			callshop "shop20",1;
+			end;
+		case 21: // Pistola
+			callshop "shop21",1;
+			end;
+		case 22: // Rifle
+			callshop "shop22",1;
+			end;
+		case 23:
+			mes "[ Vendedor de Armas ]";
+			mes "Tudo bem, volte quando precisar de meus serviços...";
+			close;
+    }
+}
+
+//--- Shops ----------------------
+-	shop	shop1	-1,605:-1
+-	shop	shop2	-1,605:-1
+-	shop	shop3	-1,605:-1
+-	shop	shop4	-1,605:-1
+-	shop	shop5	-1,605:-1
+-	shop	shop6	-1,605:-1
+-	shop	shop7	-1,605:-1
+-	shop	shop8	-1,605:-1
+-	shop	shop9	-1,605:-1
+-	shop	shop10	-1,605:-1
+-	shop	shop11	-1,605:-1
+-	shop	shop12	-1,605:-1
+-	shop	shop13	-1,605:-1
+-	shop	shop14	-1,605:-1
+-	shop	shop15	-1,605:-1
+-	shop	shop16	-1,605:-1
+-	shop	shop17	-1,605:-1
+-	shop	shop18	-1,605:-1
+-	shop	shop19	-1,605:-1
+-	shop	shop20	-1,605:-1
+-	shop	shop21	-1,605:-1
+-	shop	shop22	-1,605:-1
