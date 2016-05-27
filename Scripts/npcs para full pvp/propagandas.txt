@@ -1,0 +1,111 @@
+//======= L1nn3 Script =======================================
+//= Anunciador de Propagandas
+//===== Por: =================================================
+//= L1nn3
+//===== Versão Atual: ========================================
+//= 1.0
+//===== Compatível Com: ======================================
+//= Cronus, rAthena, brAthena, Hercules
+//===== Descrição: ===========================================
+//= Anuncia propagandas a cada 1 hora.
+//===== Comentários Adicionais: ==============================
+//= 1.0 - Iniciado o NPC [L1nn3]
+//============================================================
+-	script	anunciador#l1nn3	-1,{
+
+OnClock0000:
+	announce "Visite o nosso Fórum e fique por dentro das novidades!",8;
+	end;
+	
+OnClock0100:
+	announce "Ajude o servidor a crescer, traga seus amigos agora mesmo!",8;
+	end;
+	
+OnClock0200:
+	announce "Vote diariamente no servidor !",8;
+	end;
+	
+OnClock0300:
+	announce "O Ganhador do mês no Ranking PvP será prêmiado com Rop's",8;
+	end;
+	
+OnClock0400:
+	announce "A Staff agradece a todos players por jogarem em nosso servidor!",8;
+	end;
+	
+OnClock0500:
+	announce "Ajude o servidor a crescer, traga seus amigos agora mesmo!",8;
+	end;
+
+OnClock0600:
+	announce "Visite o nosso Fórum e fique por dentro das novidades!",8;
+	end;
+
+OnClock0700:
+	announce "Não Somos os melhores, Mas fazemos a diferença!",8;
+	end;
+
+OnClock0800:
+	announce "Vote, Ajude o servidor, não leva nem um minutinho!",8;
+	end;
+
+OnClock0900:
+	announce "Visite o Fórum e Fique por Dentro das Novidades!",8;
+	end;
+
+OnClock1000:
+	announce "Nunca se esqueça, você é especial para nós!",8;
+	end;
+
+OnClock1100:
+	announce "Eventos estarão ocorrendo e sendo anunciados no site e fórum então fiquem ligados !",8;
+	end;
+
+OnClock1200:
+	announce "Participe das enquetes no fórum e no servidor!",8;
+	end;
+
+OnClock1300:
+	announce "Obrigado a todos por jogar em nosso servidor!",8;
+	end;
+
+OnClock1400:
+	announce "Um servidor que faz a diferença!",8;
+	end;
+
+OnClock1500:
+	announce "Visitem o nosso fórum e fiquem ligados nos eventos que irão ocorrer.",8;
+	end;
+
+OnClock1600:
+	announce "Traga seus amigos e ajude o servidor!",8;
+	end;
+
+OnClock1700:
+	announce "Doe, Ajude o servidor!",8;
+	end;
+
+OnClock1800:
+	announce "Um servidor desçente com uma Staff copetente",8;
+	end;
+
+OnClock1900:
+	announce "Visite o Fórum e Fique por Dentro das Novidades!",8;
+	end;
+
+OnClock2000:
+	announce "O Ganhador do mês no Ranking PvP Será Premiado com Rop's",8;
+	end;
+
+OnClock2100:
+	announce "Chamem seus amigos agora mesmo para jogar em nosso Servidor",8;
+	end;
+
+OnClock2200:
+	announce "Participe dos eventos e ganhe prêmios incríveis",8;
+	end;
+
+OnClock2300:
+	announce "A Staff Jamais irá pedir seu Login ou Senha, Então não passe-os a ninguém",8;
+	end;
+}
